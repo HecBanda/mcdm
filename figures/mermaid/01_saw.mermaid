@@ -1,0 +1,15 @@
+flowchart TD
+    A["Start: Multi-Criteria Decision Problem"] --> B["Step 1: Construct Decision Matrix"]
+    B --> C["Step 2: Normalize Decision Matrix"]
+    C --> D["Step 3: Assign Weights to Criteria"]
+    D --> E["Step 4: Calculate Weighted Scores"]
+    E --> F["Step 5: Aggregate Scores"]
+    F --> G["Step 6: Rank Alternatives"]
+    G --> H["End: Select Best Alternative"]
+
+    B1["Decision Matrix Alternatives × Criteria"] --> B
+    C1["Normalize each criterion Benefit: (x-min)/(max-min) Cost: (max-x)/(max-min]"] --> C
+    D1["Weights sum to 1.0 Reflect importance"] --> D
+    E1["Multiply normalized values by weights"] --> E
+    F1["Sum weighted scores for each alternative"] --> F
+    G1["Sort by total score Highest score wins"] --> G

@@ -1,0 +1,15 @@
+flowchart TD
+    A[Start: Define Decision Problem] --> B[Step 1: Structure Hierarchy]
+    B --> C[Step 2: Construct Pairwise Comparison Matrices]
+    C --> D[Step 3: Calculate Priorities/Weights]
+    D --> E[Step 4: Check Consistency]
+    E --> F[Step 5: Aggregate Priorities]
+    F --> G[Step 6: Rank Alternatives]
+    G --> H[End: Select Best Alternative]
+
+    B1[Goal → Criteria → Alternatives<br/>Hierarchical decomposition] --> B
+    C1[Compare elements pairwise<br/>Use 1-9 scale<br/>Reciprocal property] --> C
+    D1[Eigenvalue method or<br/>Geometric mean method<br/>Normalize to sum = 1] --> D
+    E1[Calculate Consistency Ratio<br/>CR ≤ 0.10 acceptable] --> E
+    F1[Weighted aggregation<br/>Global priorities] --> F
+    G1[Sort by composite score<br/>Highest priority wins] --> G

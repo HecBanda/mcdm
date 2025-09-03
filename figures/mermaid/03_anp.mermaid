@@ -1,0 +1,32 @@
+flowchart TD
+    A[Start: Define Decision Problem] --> B[Step 1: Model Problem as Network]
+    B --> C[Identify Clusters and Elements]
+    C --> D[Determine Relationships and Dependencies]
+    D --> E[Step 2: Construct Pairwise Comparison Matrices]
+    E --> F[Inner Dependence Matrices]
+    E --> G[Outer Dependence Matrices]
+    F --> H[Step 3: Calculate Local Priorities]
+    G --> H
+    H --> I[Geometric Mean Method]
+    H --> J[Eigenvalue Method]
+    I --> K[Step 4: Check Consistency]
+    J --> K
+    K --> L{CR ≤ 0.10?}
+    L -->|Yes| M[Step 5: Construct Supermatrix]
+    L -->|No| N[Revise Judgments]
+    N --> K
+    M --> O[Unweighted Supermatrix]
+    O --> P[Weighted Supermatrix]
+    P --> Q[Stochastic Supermatrix]
+    Q --> R[Step 6: Calculate Limit Matrix]
+    R --> S[Raise to Power: lim W^k]
+    S --> T[Extract Global Priorities]
+    T --> U[Step 7: Sensitivity Analysis]
+    U --> V[Test Weight Changes]
+    U --> W[Test Relationship Changes]
+    V --> X[Step 8: Make Decision]
+    W --> X
+    X --> Y[Rank Alternatives]
+    Y --> Z[Select Best Option]
+    Z --> AA[Document Process]
+    AA --> BB[End]
