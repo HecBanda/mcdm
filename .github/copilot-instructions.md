@@ -30,5 +30,6 @@ Use these rules when helping in Jupyter notebooks. Favor clear, short code that 
 
 - PEP 8 for naming: snake_case for variables/functions.
 - Type hints for new functions.
-- F-strings for formatting.
+- F-strings for formatting. If no formatting is required dont use it.
 - Raise clear ValueError/TypeError for invalid inputs.
+- Don't use emojis
